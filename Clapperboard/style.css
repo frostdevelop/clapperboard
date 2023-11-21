@@ -1,0 +1,199 @@
+@font-face {
+    font-family: "ay";
+    src: url(Affectionately\ Yours.ttf) format("truetype");
+}
+@font-face {
+    font-family: "dig";
+    src: url(digital-7.ttf) format("truetype");
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        position: relative;
+        top: 50px;
+    }
+    100% {
+        opacity: 1;
+        position: relative;
+        top: 0px;
+    }
+}
+
+.fade {
+  animation: fadeInAnimation ease-in-out 1s;
+}
+.inv {
+  opacity: 0;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: black;
+  overflow: hidden;
+  margin: 0px;
+}
+
+#clapper {
+  position: absolute;
+  top: 28%;
+  left: 28%;
+  cursor: pointer;
+}
+
+#header {
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  font-family: ay;
+  font-size: 70px;
+}
+
+.flip {
+  animation: flipiny ease-in-out 1.5s;
+}
+
+.clap {
+  color: white;
+  margin: 0;
+  font-weight: bold;
+  font-family: Roboto, 'Segoe UI', serif;
+  font-size: 25px;
+  position: absolute;
+  text-align: center;
+  text-shadow: black 2px 2px;
+  left: 22%;
+}
+
+#text {
+  top: 52%;
+}
+
+.name {
+  background: #292929;
+  color: white;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-family: Roboto;
+  font-size: 30px;
+  padding: 5px;
+  box-shadow: none;
+}
+.name:hover {
+  background: #1f1f1f;
+  font-weight: bold;
+  animation: jump ease-in-out 0.2s;
+  box-shadow: black 2px 2px 5px;
+}
+.name:active {
+  background: #121212;
+  color: #d1d1d1;
+}
+#timer {
+  color: red;
+  text-align: center;
+  background: black;
+  padding: 10px;
+  position: absolute;
+  margin: 0;
+  top: 47%;
+  left: 60%;
+  font-family: dig;
+  font-size: 30px;
+  border: outset 3px #2b2b2b;
+}
+
+#date {
+  top: 58%;
+}
+#prod {
+  top: 46%;
+}
+@keyframes shadowi{
+  0% {
+    box-shadow: #000000 2px 2px 5px;
+  }
+  100% {
+    box-shadow: #292929 2px 2px 5px;
+  }
+}
+@keyframes shadowo{
+  0% {
+    box-shadow: #292929 2px 2px 5px;
+  }
+  100% {
+    box-shadow: #000000 2px 2px 5px;
+  }
+}
+@keyframes flipiny {
+0%{ transform: perspective(400px) rotateY(90deg); }
+40%{ transform: perspective(400px) rotateY(-10deg); }
+70%{ transform: perspective(400px) rotateY(10deg); }
+100%{ transform: perspective(400px) rotateY(0deg); }
+}
+#inputs {
+  animation: shadowo ease-in-out 0.5s;
+  box-shadow: #000000 2px 2px 5px;
+  width: 23%;
+}
+#inputs:hover {
+  animation: shadowi ease-in-out 0.5s;
+  box-shadow: #292929 2px 2px 5px;
+}
+@keyframes jump{
+0%{ transform:translateY(0); }
+50%{ transform:translateY(-10px); }
+100%{ transform:translateY(0); }
+}
+@keyframes alert {
+0%{ opacity: 0; -ms-transform: translateX(0); transform: translateX(0); }
+1%{ -ms-transform: translateX(-10px); transform: translateX(-10px); }
+2%{ -ms-transform: translateX(10px); transform: translateX(10px); }
+3%{ -ms-transform: translateX(-10px); transform: translateX(-10px); }
+4%{ -ms-transform: translateX(10px); transform: translateX(10px); }
+5%{ -ms-transform: translateX(-10px); transform: translateX(-10px); }
+6%{ -ms-transform: translateX(10px); transform: translateX(10px); }
+7%{ -ms-transform: translateX(-10px); transform: translateX(-10px); }
+8%{ -ms-transform: translateX(10px); transform: translateX(10px); }
+9%{ -ms-transform: translateX(-10px); transform: translateX(-10px); }
+10%{ opacity: 0.6; -ms-transform: translateX(0); transform: translateX(0); }
+80%{opacity: 0.6;}
+100%{opacity: 0;}
+}
+.notifs {
+  background: red;
+  opacity: 0;
+  width: fit-content;
+  color: white;
+  animation:alert 10s linear 0s 1 normal;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  font-weight: bold;
+  font-family: Roboto, 'Segoe UI', serif;
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  position: relative;
+  left: 85%;
+}
+.notifs:hover {
+  background: #7a0000;
+  box-shadow: black 2px 2px 5px;
+}
+.notifs:active {
+  background: #420000;
+  color: grey;
+  opacity: 0.2;
+}
+#notif { 
+  position: absolute;
+  left: 72%;
+  bottom: 0%;
+}
+#bb {
+  position: absolute;
+  top: 95%;
+  }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Clapperboard</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="clapper.png"/>
+  <meta property="og:image" content="https://clapper.doingy.repl.co/clapper.png">
+  <meta property="og:image:width" content="100">
+  <meta property="og:image:height" content="100">
+  <meta content="Online Clapperboard" property="og:title" />
+  <meta content="clap dat" property="og:description" />
+  <meta content="https://clapper.doingy.repl.co" property="og:url" />
+  <meta content="#ff0000" data-react-helmet="true" name="theme-color" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="author" property="og:author" content="infinitypacific">
+  <meta property="og:type" content="website">
+  <meta itemprop="thumbnailUrl" content="https://clapper.doingy.repl.co/clapper.png">
+  <meta property="og:site_name" content="Click it!">
+  <meta itemprop="image" content="https://clapper.doingy.repl.co/clapper.png">
+  <meta name="keywords" content="clapperboard, clapper, movie, movie production" />
+  <meta name="twitter:site" content="@infinitypac">
+  <meta name="twitter:title" content="Online Clapperboard">
+  <meta name="twitter:description" content="clapper">
+  <meta name="twitter:image" content="https://clapper.doingy.repl.co/clapper.png">
+  <meta name="twitter:url" content="https://clapper.doingy.repl.co">
+</head>
+
+<body class="inv" onload="load()">
+  <h1 id="header">Online Clapperboard</h1>
+  <div id="clapper">
+  <p id="prod" class="clap">Prod.</p>
+  <p id="text" class="clap">Director not listed</p>
+  <p id="date" class="clap">Select Date!</p>
+  <p id="timer">0:00:00:00</p>
+  <video src="clapperboard.mp4" onclick="reset = 1, play(), timer(), setTimeout('timermotion()', 600), prom('Made By Pacifiky')" width="900"></video>
+  </div>
+  <div id="inputs">
+  <input type="text" class="name" id="prodtxt" oninput="prod()" placeholder="Production"/>
+  <br/>
+  <input type="text" class="name" id="name" oninput="author()" placeholder="Enter Your Name!"/>
+  <br/>
+  <input type="button" class="name" onclick="mdy()" value="M/D/Y"/>
+  <input type="button" class="name" onclick="dmy()" value="D/M/Y"/>
+  <br/>
+  <input type="button" id="hs" class="name" onclick="HSf()" value="Hide"/>
+  </div>
+  <div id="notif">
+  </div>
+  <button onclick="window.print()" class="name" id="bb">Print this page</button>
+  <script src="script.js"></script>
+</body>
+
+</html>
